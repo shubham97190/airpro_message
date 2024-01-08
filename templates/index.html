@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block css_block %}
+
+{% endblock css_block %}
+{% block contain %}
+<div class="">
+    <form method="post" , action="">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="id_recipients" class="form-label">Email address</label>
+            <textarea name="recipients" class="form-control" rows="5" id="id_recipients">[]</textarea>
+            <input type="hidden" name="initial-recipients" value="[]" id="initial-id_recipients">
+        </div>
+
+        <div class="mb-3">
+            <label for="id_subject" class="form-label">Subject</label>
+            <input type="text" name="subject" class="form-control" maxlength="512" required="" id="id_subject">
+        </div>
+
+        <div class="mb-3">
+            <label for="id_body_html" class="form-label">Message</label>
+            {{form.body_html}}
+        </div>
+        <div class="mb-3 col-lg-4">
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+
+{% block js_block %}
+<script>
+</script>
+{% endblock %}

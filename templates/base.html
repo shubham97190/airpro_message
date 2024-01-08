@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <title>{{ page.meta_title|default:'Airpro' }}</title>
+        <!-- Include Select2 CSS and JS -->
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <style>
+            .django-ckeditor-widget:{
+                display: block !important;
+              }
+        </style>
+        {% block css_block %}{% endblock css_block %}
+
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <div class="m-5">
+
+            {% block contain %}{% endblock %}
+            </div>
+        </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/static/ckeditor/ckeditor-init.js"></script>
+    <script type="text/javascript" src="/static/ckeditor/ckeditor/ckeditor.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.select2').select2();
+            $('.django-ckeditor-widget').css("display", "block !important");
+            $('.django-ckeditor-widget').css("width", "100% !important");
+            $('#cke_id_body_html').css("width", "100% !important");
+        });
+        $(function() {
+            $('.django-ckeditor-widget').css("width", "100%");
+        });
+    </script>
+    {% block js_block %}{% endblock %}
+</html>
