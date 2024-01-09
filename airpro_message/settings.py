@@ -139,20 +139,21 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Custom Configurations
 
 # SMTP for email
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'projectbasics01@gmail.com'
-EMAIL_HOST_PASSWORD = 'vhnjsiaijmathmoi '
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-# FROM_EMAIL = 'projectbasics01@gmail.com'
-DEFAULT_FROM_EMAIL = 'marketing@airpro.in'
-
-# EMAIL_HOST = 'mail.cloudwebmail.net'
-# EMAIL_HOST_USER = 'marketing@airpro.in'
-# EMAIL_HOST_PASSWORD = 'Staroffice@11'
-# EMAIL_PORT = 465
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'projectbasics01@gmail.com'
+# EMAIL_HOST_PASSWORD = 'vhnjsiaijmathmoi '
+# EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
-# FROM_EMAIL = 'marketing@airpro.in'
+# # FROM_EMAIL = 'projectbasics01@gmail.com'
+# DEFAULT_FROM_EMAIL = 'marketing@airpro.in'
+
+EMAIL_HOST = 'mail.cloudwebmail.net'
+EMAIL_HOST_USER = 'marketing@airpro.in'
+EMAIL_HOST_PASSWORD = 'Staroffice@11'
+EMAIL_PORT = 465
+EMAIL_USE_TLS = True
+FROM_EMAIL = 'marketing@airpro.in'
+DEFAULT_FROM_EMAIL = 'marketing@airpro.in'
 
 #ckeditor upload path
 CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
